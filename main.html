@@ -3,20 +3,40 @@
 <html>
 
 <head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorted Articles</title>
 	<link rel="stylesheet" href="styles.css">
+
+	<style>
+		 body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+	</style>
+	
 </head>
 
 <body>
 
 	 <h2>Sorted Articles</h2>
-    <ul id="bande"></ul>
+    <ul id="bands"></ul>
 
 	
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 
-	 const bands = [
-        'The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean',
+		 const bands = [
+            'The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean',
             'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans',
             'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'
         ];
@@ -30,9 +50,9 @@
         const sortedBands = bands.sort((a, b) => stripArticle(a).localeCompare(stripArticle(b)));
 
         // Display the sorted bands
-        const bandList = document.getElementById("bande");
+        const bandList = document.getElementById("bands");
         bandList.innerHTML = sortedBands.map(band => `<li>${band}</li>`).join('');
-    
+    </script>
 </script>
 
 </body>
