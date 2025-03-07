@@ -8,8 +8,10 @@
 
 <body>
 
-	 
+	 <h2>Sorted Articles</h2>
+    <ul id="band"></ul>
 
+	
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 
@@ -28,7 +30,7 @@
         const sortedBands = bands.sort((a, b) => stripArticle(a).localeCompare(stripArticle(b)));
 
         // Display the sorted bands
-        const bandList = document.getElementById("bands");
+        const bandList = document.getElementById("band");
         bandList.innerHTML = sortedBands.map(band => `<li>${band}</li>`).join('');
     
 </script>
