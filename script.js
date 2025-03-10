@@ -15,7 +15,7 @@ function stripPrefix(name) {
 const sortedBands = bands.sort((a, b) => stripPrefix(a).localeCompare(stripPrefix(b)));
 
 // Display the sorted bands
-document.getElementById("bands").innerHTML = sortedBands .map(band => `<li>${band}</li>`) .join("");
+document.getElementById("bands").innerHTML = sortedBands.map(band => `<li>${band}</li>`) .join("");
   //  .map(band => `<li>${band}</li>`)
    // .join("");
 
